@@ -11,6 +11,8 @@
 		4C50CC8928C933A000BB7859 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50CC8828C933A000BB7859 /* ContentView.swift */; };
 		4C50CC8B28C933A100BB7859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C50CC8A28C933A100BB7859 /* Assets.xcassets */; };
 		4C50CC8E28C933A100BB7859 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C50CC8D28C933A100BB7859 /* Preview Assets.xcassets */; };
+		4C50CC9528C9345000BB7859 /* ColoredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50CC9428C9345000BB7859 /* ColoredView.swift */; };
+		4C50CC9728C945CC00BB7859 /* Someting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C50CC9628C945CC00BB7859 /* Someting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		4C50CC8828C933A000BB7859 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C50CC8A28C933A100BB7859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C50CC8D28C933A100BB7859 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C50CC9428C9345000BB7859 /* ColoredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredView.swift; sourceTree = "<group>"; };
+		4C50CC9628C945CC00BB7859 /* Someting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Someting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				4C50CC8628C933A000BB7859 /* SliderAppSwiftUIApp.swift */,
 				4C50CC8828C933A000BB7859 /* ContentView.swift */,
+				4C50CC9628C945CC00BB7859 /* Someting.swift */,
+				4C50CC9428C9345000BB7859 /* ColoredView.swift */,
 				4C50CC8A28C933A100BB7859 /* Assets.xcassets */,
 				4C50CC8C28C933A100BB7859 /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				4C50CC8928C933A000BB7859 /* ContentView.swift in Sources */,
 				4C50CC8728C933A000BB7859 /* SliderAppSwiftUIApp.swift in Sources */,
+				4C50CC9528C9345000BB7859 /* ColoredView.swift in Sources */,
+				4C50CC9728C945CC00BB7859 /* Someting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
