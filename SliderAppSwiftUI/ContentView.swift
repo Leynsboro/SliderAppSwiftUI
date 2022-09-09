@@ -12,54 +12,42 @@ struct ContentView: View {
     @State private var greenValue = Double.random(in: 0...255)
     @State private var blueValue = Double.random(in: 0...255)
     
+    @FocusState private var isInputActive: Bool
+    
     var body: some View {
-        ZStack {
-            Color(.gray)
-                .ignoresSafeArea()
-            VStack(spacing: 40) {
-                Spacer()
-                ColoredView(color: Color(
-                    red: redValue / 255,
-                    green: greenValue / 255,
-                    blue: blueValue / 255)
-                )
-                VStack {
-                    ColoredSliderView(value: $redValue, color: .red)
-                    ColoredSliderView(value: $greenValue, color: .green)
-                    ColoredSliderView(value: $blueValue, color: .blue)
+        NavigationView {
+            ZStack {
+                Color(.gray)
+                    .ignoresSafeArea()
+                VStack(spacing: 40) {
+                    ColoredView(red: redValue, green: greenValue, blue: blueValue)
+                    VStack {
+                        ColoredSliderView(value: $redValue, color: .red)
+                        ColoredSliderView(value: $greenValue, color: .green)
+                        ColoredSliderView(value: $blueValue, color: .blue)
+                    }
+                    .frame(height: 150)
+                    .focused($isInputActive)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            Button("Done") {
+                                isInputActive = false
+                            }
+                        }
+                    }
                     Spacer()
                 }
-                
+                .padding()
             }
-            .padding()
         }
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct ColoredSliderView: View {
-    @Binding var value: Double
-    let color: Color
-    
-    var body: some View {
-        HStack(spacing: 10) {
-            Text("\(lround(value))").foregroundColor(.white)
-            Slider(value: $value, in: 0...255, step: 1)
-                .tint(color)
-            TextField("0", value: $value, formatter: NumberFormatter())
-                .keyboardType(.numberPad)
-                .multilineTextAlignment(.trailing)
-                .frame(width: 50)
-                .foregroundColor(.black)
-                .padding(8)
-                .background()
-                .clipShape(RoundedRectangle(cornerRadius: 5))
-        }
     }
 }
 

@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ColoredView: View {
-    var color: Color
+    let red: Double
+    let green: Double
+    let blue: Double
     
     var body: some View {
-        RoundedRectangle(cornerRadius: 25)
-            .foregroundColor(color)
+        Color(red: red / 255, green: green / 255, blue: blue / 255)
             .frame(height: 150)
+            .clipShape(RoundedRectangle(cornerRadius: 25))
             .overlay(
                 RoundedRectangle(cornerRadius: 25)
                     .stroke(Color.white, lineWidth: 5))
@@ -22,6 +24,6 @@ struct ColoredView: View {
 
 struct ColoredView_Previews: PreviewProvider {
     static var previews: some View {
-        ColoredView(color: .red)
+        ColoredView(red: 100 / 255, green: 150 / 255, blue: 130 / 255)
     }
 }
